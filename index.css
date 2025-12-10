@@ -124,3 +124,49 @@ box-shadow: 0 0 20px #0ef;
     0 0 25px #0ef, 0 0 50px #0ef,
     0 0 100px #0ef, 0 0 200px #0ef
 }
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 100px 10%;
+    background: #0A1D29;
+}
+
+/* Left Side Image */
+
+.about-img img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    border: 8px solid #0EF2;
+    object-fit: cover;
+}
+
+/* Right Side Text */
+.about-text {
+    max-width: 900px;
+    margin-left: 60px;
+}
+.about-text h2 {
+    font-size: 60px;
+}
+
+.about-text h2 span {
+    color: #0ef;
+}
+
+.about-text h4 {
+    font-size: 29px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.7;
+    margin: 15px 0 30px;
+}
+.about-text p{
+    color: aliceblue;
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 2rem;
+}

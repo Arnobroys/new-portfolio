@@ -18,7 +18,7 @@ body {
     left: 0;
     width: 100%;
     padding: 20px 40px;
-    background: transparent;
+    background: #051129;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -31,11 +31,14 @@ body {
     color: #fff;
     text-decoration: none;
     font-weight: 600;
+    cursor: default;
+    opacity: 10;
+    animation: slideRight 1s ease forwards;
 }
 
 .navbar a {
     display: inline-block;
-    font-size: 25px;
+    font-size: 23px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -43,20 +46,24 @@ body {
     transition: .3s;
     cursor: pointer;
     opacity: 0.7;
+    opacity: 0;
+    animation: slideTop .9s ease forwards;
 }
 
 .navbar a:hover {
-    color: #0ef;
+     background: linear-gradient(135deg, #0ef, #0ef);
+    color: #000;
 }
 
 .home {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: #0A1D29;
+    background: #081b29;
     background-size: cover;
     display: flex;
-    justify-content: space-between;   /* image right, text left */
+    justify-content: space-between;
+    /* image right, text left */
     align-items: center;
     padding: 70px 10% 0;
 }
@@ -68,12 +75,19 @@ body {
 .home-content h3 {
     font-size: 32px;
     font-weight: 700;
+    opacity: 1;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
 }
+
 .home-content h2 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+    animation: slideRight 1s ease forwards;
+    animation-delay: 0.1s;
 }
+
 .home-content p {
     font-size: 18px;
     margin-top: 10px;
@@ -82,16 +96,22 @@ body {
 .home-img img {
     width: 260px;
     height: 260px;
-    border-radius: 50%;  /* for circle */
+    border-radius: 50%;
+    /* for circle */
     border: 8px solid #333;
-    object-fit: cover;   /* image will fit in  circle*/
+    object-fit: cover;
+    /* image will fit in  circle*/
 }
-.home-sci{
-      display: flex;     /* icons side-by-side */
-      gap: 15px;         /* space between icons */
-      margin-top: 15px;  /
+
+.home-sci {
+    display: flex;
+    /* icons side-by-side */
+    gap: 15px;
+    /* space between icons */
+    margin-top: 15px;/
 }
-.home-sci a{
+
+.home-sci a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -103,26 +123,26 @@ body {
 }
 
 .home-sci a:hover {
-background: #0ef;
-color: #081b29;
-box-shadow: 0 0 20px #0ef;
+    background: #0ef;
+    color: #081b29;
+    box-shadow: 0 0 20px #0ef;
 }
-.btn-box{
+
+.btn-box {
     display: inline-block;
     padding: 15px 30px;
     background: #0ef;
-    border-radius:30px;
-    font-size: 16px;  
+    border-radius: 30px;
+    font-size: 16px;
     color: #081b29;
     letter-spacing: 1px;
     text-decoration: none;
     font-weight: 600;
-    margin-top: 10px;
+    margin-top: 12px;
 }
-.btn-box:hover{
+.btn-box:hover {
     box-shadow: 0 0 5px #0ef,
-    0 0 25px #0ef, 0 0 50px #0ef,
-    0 0 100px #0ef, 0 0 200px #0ef
+        0 0 25px #0ef;
 }
 
 .about {
@@ -169,4 +189,27 @@ box-shadow: 0 0 20px #0ef;
     font-size: 20px;
     line-height: 1.4;
     margin-bottom: 2rem;
+}
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+    }
 }

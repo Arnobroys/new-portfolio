@@ -213,3 +213,32 @@ body {
         opacity: 1;
     }
 }
+
+
+.sub-title {
+    text-align: center;
+    font-size: 60px;
+    margin-top: 80px;
+}
+
+.sub-title span {
+    color: #0ef;
+}
+
+.container1{
+    width: 1158px;
+    height: 100px;
+     padding: 35px 90px;
+     margin: 0 auto;   
+}
+.heading1{
+    width: 100%;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+    text-decoration-thickness: 5px;
+    margin-bottom: 50px;
+}
+.bar{
+    font-size: 23px;
+}

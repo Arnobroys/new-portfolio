@@ -7,7 +7,7 @@
 
 body {
     color: #ededed;
-    background: #0A1D29;
+    background: #081b29;
     background-size: cover;
 
 }
@@ -151,7 +151,7 @@ body {
     align-items: center;
     gap: 2rem;
     padding: 100px 10%;
-    background: #0A1D29;
+    background: #081b29;
 }
 
 /* Left Side Image */
@@ -239,6 +239,40 @@ body {
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .bar{
     font-size: 23px;
+ 
 }
+.technical-bars .bar{
+    margin: 40px 0;
+}
+
+.technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation:  showText 0.5s 1s linear forwards;
+    opacity: 1;
+}
+

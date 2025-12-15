@@ -215,7 +215,10 @@ body {
 }
 
 
-.sub-title {
+
+
+
+.sub-title{
     text-align: center;
     font-size: 60px;
     margin-top: 80px;
@@ -238,29 +241,12 @@ body {
     text-underline-offset: 10px;
     text-decoration-thickness: 5px;
     margin-bottom: 50px;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .bar{
     font-size: 23px;
- 
+
 }
 .technical-bars .bar{
     margin: 40px 0;
@@ -276,3 +262,110 @@ body {
     opacity: 1;
 }
 
+.bar{
+    font-size: 23px;
+}
+.technical-bars .bar{
+    margin: 40px 0;
+}
+.technical-bars .bar:first-child{
+    margin-bottom: 0;
+}
+.technical-bars .bar:last-child{
+    margin-bottom: 0;
+}
+.technical-bars .bar .info{
+    margin-bottom: 5px;
+}
+.technical-bars .bar .info span{
+    font-size: 17px;
+    font-weight: 500;
+    animation:  showText 0.5s 1s linear forwards;
+    opacity: 1;
+}
+.technical-bars .bar .progress-line{
+    position: relative;
+    border-radius: 10px;
+    width: 100%;
+    height: 5px;
+    background-color: #000;
+    animation: animate 1s cubic-bezier(1, 0, 0.5, 1) forwards;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+@keyframes animate{
+    100%{
+        transform: scaleX(1);
+    }
+}
+.technical-bars .bar .progress-line span{
+    height: 100%;
+    background-color: #0ef;
+    position: absolute;
+    border-radius: 10px;
+     animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+     transform: scaleX(0);
+     transform-origin: left;   
+}
+.progress-line.HTML span{
+    width: 88%;
+}
+.progress-line.CSS span{
+    width: 60%;
+}
+.progress-line.javascript span{
+    width: 50%;
+}
+.progress-line.Cplus span{
+    width: 85%;
+}
+.progress-line.C span{
+    width: 93%;
+}
+.progress-line span::after{
+    position: absolute;
+    padding: 1px 8px;
+    background-color: #000;
+    color: #fff;
+    font-size: 12px;
+    border-radius: 3px;
+    top: -28px;
+    right: -20px;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+.progress-line.HTML span::after{
+    content: "88%";
+}
+.progress-line.CSS span::after{
+    content: "60%";
+}
+.progress-line.javascript span::after{
+    content: "50%";
+}
+.progress-line.Cplus span::after{
+    content: "85%";
+}
+.progress-line.C span::after{
+    content: "93%";
+}
+.progress-line span::before{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 7px solid transparent;
+    border-bottom-width: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-color: #000;
+    top: -10px;
+    right: 0;
+    animation: showText 0.5s 1.5s linear forwards;
+    opacity: 0;
+}
+@keyframes showText{
+    100%{
+        opacity: 1;
+    }
+}

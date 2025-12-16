@@ -198,28 +198,6 @@ section {
     }
 }
 
-@keyframes slidebottom {
-    0% {
-        transform: translatey(-100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translatey(0px);
-        opacity: 1;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 .about {
@@ -282,6 +260,63 @@ section {
     line-height: 1.4;
     margin-bottom: 2rem;
 }
+
+
+
+
+.heading{
+    font-size: 70px;
+    text-align: center;
+    margin: 5rem;
+}
+.education{
+    scroll-margin-top: 100px;
+    padding-top: 10px;
+    padding:15px 15px;
+    background: var(--second-bg-color);
+}
+.education .heading{
+      margin-top: 0 !important;
+  margin-bottom: 1rem;
+}
+.education h2{
+    margin-bottom: 5rem;
+}
+.timeline-items{
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+.timeline-items::before{
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 100%;
+    background-color: #0ef;
+    left: calc(50% - 1px);
+}
+.timeline-item{
+    margin-bottom: 40px;
+    width: 100%;
+    position: relative;
+}
+.timeline-item:last-child{
+    margin-bottom: 0;
+}
+.timeline-item:nth-child(odd){
+    padding-right: calc(50% + 30px);
+    text-align: right;
+}
+.timeline-item:nth-child(even){
+    padding-left: calc(50% + 30px);
+}
+
+
+
+
+
 
 
 #skilling{

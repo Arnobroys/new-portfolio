@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
     font-family: 'poppins', sans-serif;
 }
 
@@ -9,8 +10,16 @@ body {
     color: #ededed;
     background: #081b29;
     background-size: cover;
+    
 
 }
+
+section {
+  min-height: calc(100vh - 100px);
+}
+
+
+
 
 .header {
     position: fixed;
@@ -33,12 +42,12 @@ body {
     font-weight: 600;
     cursor: default;
     opacity: 10;
-    animation: slideRight 1s ease forwards;
+    animation: slideRight 0.8s ease forwards;
 }
 
 .navbar a {
     display: inline-block;
-    font-size: 23px;
+    font-size: 25px;
     color: #fff;
     text-decoration: none;
     font-weight: 500;
@@ -46,8 +55,8 @@ body {
     transition: .3s;
     cursor: pointer;
     opacity: 0.7;
-    opacity: 0;
-    animation: slideTop .9s ease forwards;
+    animation: slideTop 1s ease forwards;
+    animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover {
@@ -58,14 +67,15 @@ body {
 .home {
     position: relative;
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     background: #081b29;
     background-size: cover;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 60px;
     /* image right, text left */
     align-items: center;
-    padding: 70px 10% 0;
+    padding: 60px 10% 40px;
 }
 
 .home-content {
@@ -76,16 +86,20 @@ body {
     font-size: 32px;
     font-weight: 700;
     opacity: 1;
-    animation: slideRight 1s ease forwards;
+
     animation-delay: 0.1s;
+}
+.home-content h3 span{
+    color: #0ef;
+    font-weight: 700;
+
 }
 
 .home-content h2 {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
-    animation: slideRight 1s ease forwards;
-    animation-delay: 0.1s;
+
 }
 
 .home-content p {
@@ -97,11 +111,26 @@ body {
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    /* for circle */
-    border: 8px solid #333;
-    object-fit: cover;
-    /* image will fit in  circle*/
+    object-fit: cover;          /* ensures proper fit inside circle */
+    box-shadow: 0 0 25px #0ef;
+    cursor: pointer;
+
+    /* FIXED transition */
+    transition: transform 0.4s ease-in-out,
+                box-shadow 0.4s ease-in-out;
 }
+
+.home-img img:hover {
+    /* VERY small scale to reduce zoom */
+    transform: scale(1.03);
+
+    box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
+}
+
+
+
 
 .home-sci {
     display: flex;
@@ -145,12 +174,61 @@ body {
         0 0 25px #0ef;
 }
 
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes slidebottom {
+    0% {
+        transform: translatey(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatey(0px);
+        opacity: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .about {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
-    padding: 100px 10%;
+    gap: 5rem;
+    padding-top: 20px;
+    padding: 110px 12%;
     background: #081b29;
 }
 
@@ -160,8 +238,22 @@ body {
     width: 260px;
     height: 260px;
     border-radius: 50%;
-    border: 8px solid #0EF2;
-    object-fit: cover;
+    object-fit: cover;          /* ensures proper fit inside circle */
+    box-shadow: 0 0 25px #0ef;
+    cursor: pointer;
+
+    /* FIXED transition */
+    transition: transform 0.4s ease-in-out,
+                box-shadow 0.4s ease-in-out;
+}
+
+.about-img img:hover {
+    /* VERY small scale to reduce zoom */
+    transform: scale(1.03);
+
+    box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
 }
 
 /* Right Side Text */
@@ -190,38 +282,18 @@ body {
     line-height: 1.4;
     margin-bottom: 2rem;
 }
-@keyframes slideRight {
-    0% {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
 
-    100% {
-        transform: translateX(0px);
-        opacity: 1;
-    }
+
+#skilling{
+  min-height: auto;
+  scroll-margin-top: 1px;   /* navbar height */
+  padding-top: 90px;
+  padding-bottom: 80px;
 }
-
-@keyframes slideTop {
-    0% {
-        transform: translatey(-100px);
-        opacity: 0;
-    }
-
-    100% {
-        transform: translatey(0px);
-        opacity: 1;
-    }
-}
-
-
-
-
-
 .sub-title{
     text-align: center;
     font-size: 60px;
-    margin-top: 80px;
+    margin-top: 0;
 }
 
 .sub-title span {
@@ -230,7 +302,7 @@ body {
 
 .container1{
     width: 1158px;
-    height: 100px;
+    min-height: 100px;
      padding: 35px 90px;
      margin: 0 auto;   
 }

@@ -8,6 +8,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <!-- Boxicons CDN -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+
 </head>
 <body>
 
@@ -15,12 +18,13 @@
         <a href="#" class="logo">Arnob Roy</a>
 
         <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#about">About</a>
-            <a href="#skilling">Skill</a>
-            <a href="#">Education</a>
-            <a href="#">Achivement</a>
-            <a href="#">Contact</a>
+            <a href="#home" style="--i:1" class="active">Home</a>
+            <a href="#about"style="--i:2">About</a>
+             <a href="#education" style="--i:3">Education</a>
+            <a href="#skilling" style="--i:4">Skill</a>
+            <a href="#project" style="--i:5">Project</a>
+            <a href="#achievement" style="--i:6">Achivement</a>
+             <a href="#contact" style="--i:7" >Contact</a>
         </nav>
     </header>
 
@@ -28,7 +32,8 @@
         <div class="home-content">
             <h3>Hello it's me</h3>
             <h2>Arnob Roy</h2>
-            <h3>And I am a</h3>
+            <h3>And I am a <span class="text"></span></h3>
+            
             <p>
                 Arnob is a creative and ambitious individual with a passion for technology and learning.
                 Curious by nature, he constantly explores new ideas and skills.
@@ -40,9 +45,9 @@
         <div class="home-sci">
             <a href="#"><i class='bx bxl-facebook'></i></a>
             <a href="#"><i class='bx bxl-instagram'></i></a>
-            <a href="#"><i class='bx bxl-whatsapp'></i></a>
+            <a href="#" target="_main"><i class='bx bxl-whatsapp'></i></a>
         </div>
-        <a href="#" class="btn-box">More About</a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeLw4f2xNHxxVHSS55TY87l4-_Ebnn3a-Qk_NwPE6RLiyCxRQ/viewform?usp=publish-editor"  target="_main" class="btn-box" >Hire me</a>
  </div>
         <!-- IMAGE RIGHT SIDE -->
         <div class="home-img">
@@ -58,9 +63,10 @@
     <h2>About <span>Me</span></h2>
     <h4>CSE Student</h4>
       <p>“I’m Arnob, a tech enthusiast with a strong interest in web development. I enjoy working with HTML, CSS, and JavaScript to create clean, smooth, and visually appealing designs. I like exploring new ideas, improving user interfaces, and learning new skills to build better digital experiences.”</p>  
-      <a href="#" class="btn-box">Download CV</a>
+      <a href="https://drive.google.com/file/d/1X9Xi8ikHD3CfS9q0U8DHkgxtX_q9ES4Y/view?usp=drive_link" target= "_main" class="btn-box">Download CV</a>
 </div>
 </section >
+
 
 
 <section class="skilling" id="skilling">
@@ -112,21 +118,7 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<script src="index.js"></script>
 
 </body>
 </html>

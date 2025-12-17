@@ -45,6 +45,7 @@ section {
     animation: slideRight 0.8s ease forwards;
 }
 
+
 .navbar a {
     display: inline-block;
     font-size: 25px;
@@ -52,16 +53,22 @@ section {
     text-decoration: none;
     font-weight: 500;
     margin-left: 35px;
-    transition: .3s;
+
+    padding: 3px 10px;              /* pill shape er jonno space */
+    border-radius: 50px;            /* eta pill বানায় */
+
+    transition: all 0.8s ease;
     cursor: pointer;
     opacity: 0.7;
+
     animation: slideTop 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
 
 .navbar a:hover {
-     background: linear-gradient(135deg, #0ef, #0ef);
+    background: linear-gradient(135deg, #0ef, #0ef);
     color: #000;
+    opacity: 1;
 }
 
 .home {
@@ -518,4 +525,48 @@ section {
     100%{
         opacity: 1;
     }
+}
+
+
+
+#contact .contact{
+     font-size: 32px;
+    text-align: center;
+    margin: 5rem;
+}
+
+#contact .contact-items{
+   margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 40px;
+}
+
+#contact .contact-item{
+    width: 100%;
+    padding: 60px;
+    text-align: center;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+  
+
+    box-shadow: 0px 0px 18px 0 #0ef;
+    transition: .3s ease box-shadow;
+}
+
+#contact .contact-item:hover{
+    box-shadow: 0px 0px 5px 0 #0ef;
+    
+}
+#contact .contact-info h1{
+    font-size: 2.5rem;
+ 
+    margin-bottom: 5px;
+}
+
+#contact .contact-info h2{
+    font-size: 1.3rem;
+    line-height: 2rem;
+  
 }

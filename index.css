@@ -270,7 +270,7 @@ section {
     margin: 5rem;
 }
 .education{
-    scroll-margin-top: 100px;
+    scroll-margin-top: 60px;
     padding-top: 10px;
     padding:15px 15px;
     background: var(--second-bg-color);
@@ -312,6 +312,48 @@ section {
 .timeline-item:nth-child(even){
     padding-left: calc(50% + 30px);
 }
+.timeline-dot{
+    height: 21px;
+    width: 21px;
+    background-color: #0ef;
+    box-shadow: 0 0 5px #0ef,
+        0 0 25px #0ef;
+    position: absolute;
+    left: calc(50% - 8px);
+    border-radius: 50%;
+    top: 10px;
+}
+.timeline-date{
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    margin: 6px 0 15px;
+ }
+.timeline-content{
+    background-color: #081b29;
+    border: 3px solid #0ef;
+    padding: 30px 50px;
+    border-radius: 4rem;
+    box-shadow: 0 0 25px #0ef;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.timeline-content:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 25px #0ef;
+}
+.timeline-content h3{
+    font-size: 20px;
+    color: white;
+    margin: 0 0 10px;
+    font-weight: 500;
+}
+.timeline-content p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 22px;
+}
 
 
 
@@ -321,12 +363,13 @@ section {
 
 #skilling{
   min-height: auto;
-  scroll-margin-top: 1px;   /* navbar height */
+  scroll-margin-top: 1px; 
   padding-top: 90px;
   padding-bottom: 80px;
 }
 .sub-title{
     text-align: center;
+
     font-size: 60px;
     margin-top: 0;
 }

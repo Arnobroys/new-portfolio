@@ -52,9 +52,9 @@ section {
     color: #fff;
     text-decoration: none;
     font-weight: 500;
-    margin-left: 35px;
+    margin-left: 0px;
 
-    padding: 3px 10px;              /* pill shape er jonno space */
+    padding: 6px 15px;              /* pill shape er jonno space */
     border-radius: 50px;            /* eta pill বানায় */
 
     transition: all 0.8s ease;
@@ -106,6 +106,7 @@ section {
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
+    color: #0ef;
 
 }
 
@@ -286,9 +287,14 @@ section {
       margin-top: 0 !important;
   margin-bottom: 1rem;
 }
+
 .education h2{
     margin-bottom: 5rem;
 }
+.education .heading span {
+    color: #0ef;
+}
+
 .timeline-items{
     max-width: 1000px;
     margin: auto;
@@ -529,16 +535,21 @@ section {
 
 
 #contact .contact{
+    display: block;
      font-size: 32px;
     text-align: center;
     margin: 5rem;
+}
+#contact .contact h1 span{
+    color: #0ef; /* info heading colour */
 }
 
 #contact .contact-items {
     margin-top: 50px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fit, minmax(325px, 325px));
     gap: 40px;
+    justify-content: center;
 }
 
 #contact .contact-item {
@@ -552,7 +563,8 @@ section {
     align-items: center;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 0px 18px 0 #0ef;
+     box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef;
     transition: .3s ease box-shadow;
     overflow: hidden;       /* important, image container bahire na jete */
 }
@@ -581,3 +593,4 @@ section {
     line-height: 2rem;
     font-weight: 500;
 }
+

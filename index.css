@@ -533,6 +533,31 @@ section {
     }
 }
 
+.achievement{
+    min-height: auto;
+  scroll-margin-top: 1px; 
+  padding-top: 90px;
+  padding-bottom: 80px;
+
+}
+.section-title{
+    text-align: center;
+
+    font-size: 60px;
+    margin-top: 0;
+}
+
+.achievements {
+    
+margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 40px;
+    justify-content: center;
+}
+
+
+
 
 #contact .contact{
     display: block;

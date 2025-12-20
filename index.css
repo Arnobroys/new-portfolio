@@ -32,6 +32,7 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+        padding: 17px;
 }
 
 .logo {
@@ -45,6 +46,9 @@ section {
     animation: slideRight 0.8s ease forwards;
 }
 
+.navbar {
+    padding: 0px 0;
+}
 
 .navbar a {
     display: inline-block;
@@ -53,8 +57,8 @@ section {
     text-decoration: none;
     font-weight: 500;
     margin-left: 0px;
-
-    padding: 6px 15px;              /* pill shape er jonno space */
+line-height: normal;
+    padding: 2px 12px;              /* pill shape er jonno space */
     border-radius: 50px;            /* eta pill বানায় */
 
     transition: all 0.8s ease;
@@ -557,6 +561,45 @@ margin-top: 50px;
 }
 
 
+.ach-card {
+    width: 90%;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 30px;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 18px 0 #0ef,
+                0px 0px 40px 0 #0ef;
+    transition: .3s ease box-shadow;
+        max-width: 300px; 
+}
+
+.ach-card:hover {
+    box-shadow: 0px 0px 5px 0 #0ef;
+}
+
+.ach-icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+    color: #00c6ff;
+    transition: 0.3s ease;
+}
+
+.ach-card h2 {
+    text-transform: uppercase;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.ach-card p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    opacity: 0.8;
+}
 
 
 #contact .contact{
@@ -618,4 +661,3 @@ margin-top: 50px;
     line-height: 2rem;
     font-weight: 500;
 }
-

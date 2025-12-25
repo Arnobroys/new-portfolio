@@ -182,8 +182,10 @@ line-height: normal;
     margin-top: 12px;
 }
 .btn-box:hover {
-    box-shadow: 0 0 5px #0ef,
-        0 0 25px #0ef;
+    box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
+
 }
 
 @keyframes slideRight {
@@ -333,8 +335,9 @@ line-height: normal;
     height: 21px;
     width: 21px;
     background-color: #0ef;
-    box-shadow: 0 0 5px #0ef,
-        0 0 25px #0ef;
+    box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
     position: absolute;
     left: calc(50% - 8px);
     border-radius: 50%;
@@ -602,6 +605,25 @@ line-height: normal;
     font-size: 1rem;
     line-height: 1.8;
 }
+.layer i{
+    color: #ff004f;
+    margin-top: 20px;
+    font-size: 20px;
+    background: #e0e0e0;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+.row:hover img{
+    transform: scale(1.1);
+
+}
+.row:hover .layer{
+    height: 100%;
+}
 
 
 
@@ -646,8 +668,10 @@ margin-top: 50px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    box-shadow: 0px 0px 18px 0 #0ef,
-                0px 0px 40px 0 #0ef;
+   box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
+
     transition: .3s ease box-shadow;
         max-width: 300px; 
 }
@@ -706,8 +730,9 @@ margin-top: 50px;
     align-items: center;
     text-align: center;
     border-radius: 10px;
-     box-shadow: 0 0 25px #0ef,
-                0 0 50px #0ef;
+    box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
     transition: .3s ease box-shadow;
     overflow: hidden;       /* important, image container bahire na jete */
 }
@@ -751,7 +776,10 @@ margin-top: 50px;
     height: 8px;
     background: #0ef;
     border-radius: 50%;
-    box-shadow: 0 0 8px #0ef;
+   box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
+
 }
 .bottom-cta {
     position: fixed;

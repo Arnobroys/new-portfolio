@@ -217,6 +217,175 @@ line-height: normal;
 
 
 
+
+
+
+
+/* ===== HAMBURGER ===== */
+/* Hamburger Icon */
+.hamburger {
+    display: none;
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 1001; /* Navbar এর উপরে থাকবে */
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 15px 20px;
+        position: relative;
+        z-index: 1000;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    /* Navbar Mobile Style */
+    .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(160deg,#010b18,#000814);
+        display: none; /* default hidden */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+        box-shadow: 0 8px 15px rgba(0,0,0,0.3);
+        border-top: 2px solid #0d1a34;
+        transition: all 0.3s ease;
+    }
+
+    /* Navbar Links */
+    .navbar a {
+        font-size: 20px;
+        margin: 10px 0;
+        width: 90%;
+        text-align: center;
+        padding: 10px 0;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 8px;
+        transition: background 0.3s, color 0.3s;
+    }
+
+    /* Hover Effect */
+    .navbar a:hover,
+    .navbar a.active {
+        background: #0d1a34;
+
+    }
+
+    /* Show Navbar when active */
+    .navbar.active {
+        display: flex;
+    }
+
+
+    /* ===== HOME FIX ===== */
+    .home {
+        flex-direction: column;
+        padding-top: 140px;
+        text-align: center;
+        gap: 40px;
+    }
+
+    .home-content h2 {
+        font-size: 40px;
+    }
+
+    .home-content h3 {
+        font-size: 26px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+    }
+
+    .home-img img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .home-sci {
+        justify-content: center;
+    }
+}
+@media (max-width: 768px) {
+    .home-img {
+        margin-top: -30px;   /* image upore tulbe */
+    }
+}
+@media (max-width: 768px) {
+
+    .home {
+        flex-direction: column;
+    }
+
+    .home-img {
+        order: -1;          /* pic likhar upore chole ashbe */
+        margin-bottom: 20px;
+    }
+
+    .home-content {
+        order: 1;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .about {
     display: flex;
     justify-content: center;
@@ -277,6 +446,55 @@ line-height: normal;
     line-height: 1.4;
     margin-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+
+    .about {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 2.5rem;
+        padding: 120px 6% 60px;
+    }
+
+    .about-img img {
+        width: 190px;
+        height: 190px;
+    }
+
+    .about-text {
+        margin-left: 0;   /* ❌ remove desktop offset */
+        max-width: 100%;
+    }
+
+    .about-text h2 {
+        font-size: 40px;
+    }
+
+    .about-text h4 {
+        font-size: 22px;
+    }
+
+    .about-text p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

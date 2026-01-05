@@ -19,6 +19,13 @@ section {
 }
 
 
+.hamburger {
+    font-size: 28px;
+    color: #fff;
+    cursor: pointer;
+    display: none;       /* default desktop এ hide */
+    z-index: 1000;
+}
 
 
 .header {
@@ -27,13 +34,13 @@ section {
     left: 0;
     width: 100%;
     padding: 20px 40px;
-    
+     position: fixed; 
     border-bottom: 2px solid rgba(14, 239, 255, 0.2);
-
+background: #081b29; 
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    z-index: 1000;
         padding: 17px;
 }
 
@@ -228,7 +235,7 @@ line-height: normal;
     font-size: 28px;
     color: #fff;
     cursor: pointer;
-    z-index: 1001; /* Navbar এর উপরে থাকবে */
+    z-index: 1100; /* Navbar এর উপরে থাকবে */
 }
 
 /* ===== RESPONSIVE ===== */
@@ -236,7 +243,7 @@ line-height: normal;
 
     .header {
         padding: 15px 20px;
-        position: relative;
+        position: fixed;
         z-index: 1000;
     }
 
@@ -273,12 +280,7 @@ line-height: normal;
         transition: background 0.3s, color 0.3s;
     }
 
-    /* Hover Effect */
-    .navbar a:hover,
-    .navbar a.active {
-        background: #0d1a34;
 
-    }
 
     /* Show Navbar when active */
     .navbar.active {
@@ -313,6 +315,11 @@ line-height: normal;
 
     .home-sci {
         justify-content: center;
+    }
+        .navbar a:hover {
+        background: none;
+        color: #fff;
+        box-shadow: none;
     }
 }
 @media (max-width: 768px) {
@@ -596,12 +603,16 @@ line-height: normal;
     font-weight: 300;
     line-height: 22px;
 }
-/* Heading scale – unchanged */
+@media (max-width: 768px) {
 .heading {
+
     font-size: 40px;
     margin: 3rem 1rem;
+    
 }
-
+.education{
+         scroll-margin-top: 100px;
+}
 .education h2 {
     margin-bottom: 3rem;
 }
@@ -656,7 +667,7 @@ line-height: normal;
     font-size: 14px;
     line-height: 20px;
 }
-
+}
 
 
 
@@ -1064,11 +1075,14 @@ line-height: normal;
     opacity: 1;
     transform: translateY(0);
 }
+
+
 /* ===== Responsive Portfolio Section ===== */
-
+@media (max-width: 768px) {
 .main-text {
     padding-top: 50px;
     padding-bottom: 40px;
+         scroll-margin-top: 50px;
 }
 
 .main-text h2 {
@@ -1136,7 +1150,7 @@ line-height: normal;
     height: 42px;
     font-size: 15px;
 }
-
+}
 
 
 
@@ -1172,7 +1186,7 @@ line-height: normal;
 
 .achievement{
     min-height: auto;
-  scroll-margin-top: 1px; 
+  scroll-margin-top: 19px; 
   padding-top: 90px;
   padding-bottom: 80px;
 
@@ -1247,6 +1261,7 @@ margin-top: 50px;
     .section-title {
         font-size: 36px;
         padding: 0 10px;
+              scroll-margin-top: 150px;
     }
 
     .achievements {
@@ -1280,6 +1295,7 @@ margin-top: 50px;
 @media (max-width: 480px) {
     .section-title {
         font-size: 28px;
+              scroll-margin-top: 150px;
     }
 
     .achievements {
@@ -1427,6 +1443,63 @@ margin-top: 50px;
 
 
 
+@media (max-width: 768px) {
+
+    /* ✅ FIX navbar overlap on click */
+    #contact {
+        scroll-margin-top: 100px; /* navbar height অনুযায়ী */
+    }
+
+    #contact .contact {
+        font-size: 24px;
+        margin: 4rem auto;
+        padding: 0 15px;
+    }
+
+    /* ✅ 2 up, 1 centered below */
+    #contact .contact-items {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 18px;
+        margin-top: 5rem; /* header থেকে একটু নামানো */
+    }
+
+    #contact .contact-item {
+        padding: 18px;
+        max-width: 100%;
+    }
+
+    /* ✅ Center the 3rd card */
+    #contact .contact-item:nth-child(3) {
+        grid-column: span 2;
+        justify-self: center;
+        width: 70%;
+    }
+
+    #contact .icon {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 6px;
+    }
+
+    #contact .contact-info h1 {
+        font-size: 1.5rem;
+    }
+
+    #contact .contact-info h2 {
+        font-size: 0.95rem;
+        line-height: 1.4rem;
+    }
+
+    .contact-status {
+        font-size: 11px;
+        gap: 6px;
+    }
+
+    .contact-status span {
+        width: 6px;
+        height: 6px;
+    }
+}
 
 
 
@@ -1473,6 +1546,66 @@ margin-top: 50px;
 .bottom-cta a:hover {
     transform: translateY(-2px);
 }
+
+
+/* ===== Responsive Bottom CTA ===== */
+
+/* Tablet & Medium Devices (max-width: 1024px) */
+@media (max-width: 1024px) {
+    .bottom-cta {
+        padding: 10px 20px;
+        gap: 15px;
+    }
+
+    .bottom-cta p {
+        font-size: 13px;
+    }
+
+    .bottom-cta a {
+        padding: 7px 16px;
+        font-size: 13px;
+    }
+}
+
+/* Mobile & Small Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .bottom-cta {
+        padding: 8px 16px;
+        gap: 12px;
+        bottom: 15px;
+    }
+
+    .bottom-cta p {
+        font-size: 12px;
+    }
+
+    .bottom-cta a {
+        padding: 6px 14px;
+        font-size: 12px;
+    }
+}
+
+/* Extra Small Devices / Mobile Portrait (max-width: 480px) */
+@media (max-width: 480px) {
+    .bottom-cta {
+        flex-direction: column;
+        padding: 6px 12px;
+        gap: 8px;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .bottom-cta p {
+        font-size: 11px;
+    }
+
+    .bottom-cta a {
+        padding: 5px 12px;
+        font-size: 11px;
+    }
+}
+
 
 
 
@@ -1593,4 +1726,114 @@ margin-top: 50px;
 .footer-links a:hover{
   color: #00eeff;
   padding-left: 6px;
+}
+/* ================= Footer Responsive ================= */
+
+/* Tablet & Medium Devices */
+@media (max-width: 1024px) {
+
+  .portfolio-footer {
+    padding: 40px 6% 20px;
+  }
+
+  .footer-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+
+  .footer-box h3 {
+    font-size: 15px;
+  }
+
+  .footer-box ul li {
+    font-size: 13.5px;
+  }
+
+  .support-card {
+    padding: 12px 16px;
+  }
+
+  .social i {
+    font-size: 17px;
+    padding: 7px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+
+  .portfolio-footer {
+    padding: 30px 6% 16px; /* ⬅️ footer height control */
+  }
+
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .footer-box h3 {
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .footer-box ul li {
+    font-size: 13px;
+    margin: 6px 0;
+  }
+
+  .support-card {
+    padding: 12px 14px;
+    border-radius: 14px;
+    margin-bottom: 10px;
+  }
+
+  .support-card h2 {
+    font-size: 16px;
+  }
+
+  .social i {
+    font-size: 16px;
+    padding: 6px;
+    margin: 8px 10px 0 0;
+  }
+
+  .footer-bottom {
+    margin-top: 22px;
+    padding-top: 10px;
+    font-size: 12px;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+
+  .portfolio-footer {
+    padding: 26px 5% 14px;
+  }
+
+  .footer-container {
+    gap: 14px;
+  }
+
+  .footer-box h3 {
+    font-size: 13.5px;
+    letter-spacing: 1px;
+  }
+
+  .footer-box ul li {
+    font-size: 12.5px;
+  }
+
+  .support-card {
+    padding: 10px 12px;
+  }
+
+  .social i {
+    font-size: 15px;
+    padding: 6px;
+  }
+
+  .footer-bottom {
+    font-size: 11.5px;
+  }
 }

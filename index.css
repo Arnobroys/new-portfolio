@@ -455,6 +455,7 @@ line-height: normal;
         text-align: center;
         gap: 2.5rem;
         padding: 120px 6% 60px;
+        scroll-margin-top: 90px;
     }
 
     .about-img img {
@@ -595,6 +596,81 @@ line-height: normal;
     font-weight: 300;
     line-height: 22px;
 }
+/* Heading scale – unchanged */
+.heading {
+    font-size: 40px;
+    margin: 3rem 1rem;
+}
+
+.education h2 {
+    margin-bottom: 3rem;
+}
+
+/* ✅ ADD SPACE BETWEEN HEADER & TIMELINE */
+.education .timeline-items {
+    margin-top: 5rem;   /* ← main fix */
+    padding-left: 30px;
+}
+
+/* Center line -> left side */
+.timeline-items::before {
+    left: 15px;
+}
+
+/* Each item full width */
+.timeline-item {
+    width: 100%;
+    padding-left: 40px !important;
+    padding-right: 0 !important;
+    text-align: left !important;
+    margin-bottom: 30px;
+}
+
+/* Remove alternating layout */
+.timeline-item:nth-child(odd),
+.timeline-item:nth-child(even) {
+    padding: 0;
+}
+
+/* Dot alignment */
+.timeline-dot {
+    left: 6px;
+    top: 12px;
+}
+
+/* Content spacing */
+.timeline-content {
+    padding: 20px 25px;
+    border-radius: 2rem;
+}
+
+.timeline-date {
+    font-size: 16px;
+}
+
+.timeline-content h3 {
+    font-size: 18px;
+}
+
+.timeline-content p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -762,6 +838,70 @@ line-height: normal;
 }
 
 
+@media (max-width: 768px) {
+
+    /* Section spacing */
+    #skilling{
+        padding-top: 60px;
+        padding-bottom: 60px;
+              scroll-margin-top: 50px;
+    }
+
+    /* Title scaling */
+    .sub-title{
+        font-size: 36px;
+        margin-bottom: 30px;
+    }
+
+    .heading1{
+        font-size: 22px;
+        margin-bottom: 30px;
+        text-decoration-thickness: 3px;
+        text-underline-offset: 6px;
+    }
+
+    /* Container full width */
+    .container1{
+        width: 100%;
+        padding: 20px 20px;
+    }
+
+    /* Skill bar spacing */
+    .technical-bars .bar{
+        margin: 30px 0;
+    }
+
+    .technical-bars .bar .info span{
+        font-size: 15px;
+    }
+
+    /* Progress bar */
+    .technical-bars .bar .progress-line{
+        height: 4px;
+    }
+
+    .technical-bars .bar .progress-line span{
+        height: 100%;
+    }
+
+    /* Percentage tooltip */
+    .progress-line span::after{
+        font-size: 11px;
+        top: -25px;
+        right: -18px;
+    }
+
+    .progress-line span::before{
+        top: -8px;
+        right: -1px;
+    }
+}
+@media (max-width: 768px) {
+    .technical-bars .bar .progress-line,
+    .technical-bars .bar .progress-line span {
+        animation-duration: 0.6s;
+    }
+}
 
 
 
@@ -772,7 +912,29 @@ line-height: normal;
 
 
 
-/* ===== Portfolio Section ===== */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ===== Project sec ===== */
 
 .main-text{
     padding-top: 90px;
@@ -902,6 +1064,91 @@ line-height: normal;
     opacity: 1;
     transform: translateY(0);
 }
+/* ===== Responsive Portfolio Section ===== */
+
+.main-text {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.main-text h2 {
+    font-size: 34px;
+}
+
+/* ✅ MAIN FIX: 2 COLUMN GRID */
+.portfolio-content {
+    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.row {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.layer h5 {
+    font-size: 1.05rem;
+}
+
+.layer p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.layer i {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+}
+.main-text {
+    padding-top: 50px;
+    padding-bottom: 40px;
+}
+
+.main-text h2 {
+    font-size: 34px;
+}
+
+/* ✅ MAIN FIX: 2 COLUMN GRID */
+.portfolio-content {
+    gap: 18px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.row {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+}
+
+.layer h5 {
+    font-size: 1.05rem;
+}
+
+.layer p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+}
+
+.layer i {
+    width: 42px;
+    height: 42px;
+    font-size: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -994,6 +1241,99 @@ margin-top: 50px;
     line-height: 1.6;
     opacity: 0.8;
 }
+
+/* Mobile & Small Devices (max-width: 768px) */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 36px;
+        padding: 0 10px;
+    }
+
+    .achievements {
+        gap: 20px;
+        grid-template-columns: 1fr;
+        padding: 0 10px;
+    }
+
+    .ach-card {
+        width: 100%;
+        max-width: 100%;
+        margin: 15px auto;
+        padding: 20px;
+    }
+
+    .ach-icon {
+        font-size: 35px;
+        margin-bottom: 10px;
+    }
+
+    .ach-card h2 {
+        font-size: 1.8rem;
+    }
+
+    .ach-card p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Extra Small Devices / Mobile Portrait (max-width: 480px) */
+@media (max-width: 480px) {
+    .section-title {
+        font-size: 28px;
+    }
+
+    .achievements {
+        gap: 15px;
+    }
+
+    .ach-card {
+        margin: 10px auto;
+        padding: 15px;
+    }
+
+    .ach-icon {
+        font-size: 30px;
+        margin-bottom: 8px;
+    }
+
+    .ach-card h2 {
+        font-size: 1.5rem;
+    }
+
+    .ach-card p {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

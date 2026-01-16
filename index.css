@@ -127,30 +127,6 @@ line-height: normal;
     margin-top: 10px;
 }
 
-.home-img img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;          /* ensures proper fit inside circle */
-    box-shadow: 0 0 25px #0ef;
-    cursor: pointer;
-
-    /* FIXED transition */
-    transition: transform 0.4s ease-in-out,
-                box-shadow 0.4s ease-in-out;
-}
-
-.home-img img:hover {
-    /* VERY small scale to reduce zoom */
-    transform: scale(1.03);
-
-    box-shadow: 0 0 25px #0ef,
-                0 0 50px #0ef,
-                0 0 75px #0ef;
-}
-
-
-
 
 .home-sci {
     display: flex;
@@ -195,6 +171,29 @@ line-height: normal;
                 0 0 75px #0ef;
 
 }
+.home-img img {
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;          /* ensures proper fit inside circle */
+    box-shadow: 0 0 25px #0ef;
+    cursor: pointer;
+
+    /* FIXED transition */
+    transition: transform 0.4s ease-in-out,
+                box-shadow 0.4s ease-in-out;
+}
+
+.home-img img:hover {
+    /* VERY small scale to reduce zoom */
+    transform: scale(1.03);
+
+    box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
+}
+
+
 
 @keyframes slideRight {
     0% {
@@ -560,7 +559,7 @@ line-height: normal;
 }
 .timeline-dot{
     height: 21px;
-    width: 21px;
+    width: 20px;
     background-color: #0ef;
     box-shadow: 0 0 25px #0ef,
                 0 0 50px #0ef,
@@ -574,20 +573,22 @@ line-height: normal;
     font-size: 20px;
     font-weight: 800;
     color: white;
-    margin: 6px 0 15px;
+    margin: 6px 50px 15px;
  }
 .timeline-content{
     background-color: #081b29;
     border: 3px solid #0ef;
     padding: 30px 50px;
     border-radius: 4rem;
-    box-shadow: 0 0 25px #0ef;
+     box-shadow: 0 0 25px #0ef;
     cursor: pointer;
     transition: 0.3s ease-in-out;
 }
 .timeline-content:hover{
     transform: scale(1.05);
-    box-shadow: 0 0 25px #0ef;
+     box-shadow: 0 0 25px #0ef,
+                0 0 50px #0ef,
+                0 0 75px #0ef;
 }
 .timeline-content h3{
     font-size: 20px;
@@ -696,10 +697,10 @@ line-height: normal;
 
 /* Grid layout */
 .portfolio-content{
-    margin-top: 50px;
+    margin-top: 30px;
     display: grid;
-    grid-template-columns: repeat(3, minmax(300px, auto));
-    gap: 40px;
+    grid-template-columns: repeat(3, minmax(60px, auto));
+    gap: 30px;
     justify-content: center;
 }
 
@@ -707,9 +708,8 @@ line-height: normal;
 .row{
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 90px;
     cursor: pointer;
-
     max-width: 300px;
     width: 90%;
     margin: 30px;
@@ -968,12 +968,6 @@ margin-top: 50px;
     transform: translateY(-8px) scale(1.05);
 }
 
-.ach-icon {
-    font-size: 45px;
-    margin-bottom: 15px;
-    color: #00c6ff;
-    transition: 0.3s ease;
-}
 
 .ach-card h2 {
     text-transform: uppercase;

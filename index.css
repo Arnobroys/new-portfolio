@@ -758,6 +758,39 @@ line-height: normal;
 .blog-btn:hover {
     border-bottom: 1px solid #ff4a57;
 }
+@media (max-width: 768px) {
+
+    .blog {
+        padding: 70px 20px;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+        font-size: 28px;
+    }
+
+    .blog-content {
+        gap: 25px;
+    }
+
+    .blog-card {
+        width: 100%;
+        max-width: 420px;
+        padding: 25px;
+    }
+
+    .blog-card h2 {
+        font-size: 17px;
+    }
+
+    .blog-card p {
+        font-size: 13.5px;
+    }
+
+    .blog-btn {
+        font-size: 12.5px;
+    }
+}
 
 
 
@@ -1254,27 +1287,36 @@ margin-top: 50px;
                 0 0 75px #0ef;
 }
 
-
-
-
 @media (max-width: 768px) {
 
-    /* ✅ FIX navbar overlap on click */
+    /* =============================
+       CONTACT SECTION HARD FIX
+       ============================= */
+
     #contact {
-        scroll-margin-top: 100px; /* navbar height অনুযায়ী */
+        scroll-margin-top: 150px;
+        position: relative;
+    }
+
+    /* 🔴 HARD SPACER (guaranteed gap before footer) */
+    #contact::after {
+        content: "";
+        display: block;
+        height: 160px;   /* footer থেকে safe distance */
+        width: 100%;
     }
 
     #contact .contact {
         font-size: 24px;
-        margin: 4rem auto;
-        padding: 0 15px;
+        margin: 4rem auto 0;
+        padding: 100px 15px 0;
     }
 
-    /* ✅ 2 up, 1 centered below */
+    /* 2 up, 1 centered below */
     #contact .contact-items {
         grid-template-columns: repeat(2, 1fr);
         gap: 18px;
-        margin-top: 5rem; /* header থেকে একটু নামানো */
+        margin-top: 5rem;
     }
 
     #contact .contact-item {
@@ -1282,7 +1324,7 @@ margin-top: 50px;
         max-width: 100%;
     }
 
-    /* ✅ Center the 3rd card */
+    /* Center the 3rd card */
     #contact .contact-item:nth-child(3) {
         grid-column: span 2;
         justify-self: center;
@@ -1314,8 +1356,6 @@ margin-top: 50px;
         height: 6px;
     }
 }
-
-
 
 
 
@@ -1543,41 +1583,14 @@ margin-top: 50px;
 }
 /* ================= Footer Responsive ================= */
 
-/* Tablet & Medium Devices */
-@media (max-width: 1024px) {
-
-  .portfolio-footer {
-    padding: 40px 6% 20px;
-  }
-
-  .footer-container {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 22px;
-  }
-
-  .footer-box h3 {
-    font-size: 15px;
-  }
-
-  .footer-box ul li {
-    font-size: 13.5px;
-  }
-
-  .support-card {
-    padding: 12px 16px;
-  }
-
-  .social i {
-    font-size: 17px;
-    padding: 7px;
-  }
-}
 
 /* Mobile Devices */
 @media (max-width: 768px) {
 
+  /* 🔴 MAIN FIX: distance from contact */
   .portfolio-footer {
-    padding: 30px 6% 16px; /* ⬅️ footer height control */
+    margin-top: 1px;          /* ⬅️ contact–footer gap */
+    padding: 3px 6% 10px;      /* footer height control */
   }
 
   .footer-container {
@@ -1618,36 +1631,3 @@ margin-top: 50px;
   }
 }
 
-/* Extra Small Devices */
-@media (max-width: 480px) {
-
-  .portfolio-footer {
-    padding: 26px 5% 14px;
-  }
-
-  .footer-container {
-    gap: 14px;
-  }
-
-  .footer-box h3 {
-    font-size: 13.5px;
-    letter-spacing: 1px;
-  }
-
-  .footer-box ul li {
-    font-size: 12.5px;
-  }
-
-  .support-card {
-    padding: 10px 12px;
-  }
-
-  .social i {
-    font-size: 15px;
-    padding: 6px;
-  }
-
-  .footer-bottom {
-    font-size: 11.5px;
-  }
-}

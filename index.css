@@ -1294,7 +1294,7 @@ margin-top: 50px;
        ============================= */
 
     #contact {
-        scroll-margin-top: 150px;
+        scroll-margin-top: 1px;
         position: relative;
     }
 
@@ -1367,7 +1367,7 @@ margin-top: 50px;
 
 .bottom-cta {
     position: fixed;
-    bottom: 20px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
     display: flex;
@@ -1398,7 +1398,7 @@ margin-top: 50px;
 }
 
 .bottom-cta a:hover {
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 

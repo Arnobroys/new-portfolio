@@ -6,3 +6,40 @@ var typed= new Typed(".text", {
     loop:true
 });
 
+
+
+
+const skilling = document.getElementById("skilling");
+
+/* function to restart animation */
+function activateSkillAnimation() {
+  skilling.classList.remove("active");
+
+  // force reflow (VERY IMPORTANT)
+  void skilling.offsetWidth;
+
+  setTimeout(() => {
+    skilling.classList.add("active");
+  }, 100);
+}
+
+/* observe scroll */
+const observer = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        activateSkillAnimation();
+      }
+    });
+  },
+  { threshold: 0.4 }
+);
+
+observer.observe(skilling);
+
+/* navbar click fix */
+document.querySelectorAll('a[href="#skilling"]').forEach(link => {
+  link.addEventListener("click", () => {
+    setTimeout(activateSkillAnimation, 400);
+  });
+});

@@ -25,9 +25,10 @@
             <a href="#about"style="--i:2">About</a>
              <a href="#education" style="--i:3">Education</a>
              <a href="#blog" style="--i:4" >Blog</a>
-            <a href="#project" style="--i:5">Project</a>
-            <a href="#achievementss" style="--i:6">Achivement</a>
-             <a href="#contact" style="--i:7" >Contact</a>
+             <a href="#skilling" style="--i:5" >Skill</a>
+            <a href="#project" style="--i:6">Project</a>
+            <a href="#achievementss" style="--i:7">Achivement</a>
+             <a href="#contact" style="--i:8" >Contact</a>
         </nav>
 
     </header>
@@ -174,6 +175,63 @@
 
 
 
+
+
+
+<section class="skilling" id="skilling">
+<h1 class="sub-title">My <span>skills</span></h1>
+
+    <div class="container1" id="skills">
+        <h1 class="heading1">Technical skills</h1>
+        <div class="technical-bars">
+            <div class="bar"><i class="bx bxl-html5"></i>
+                <div class="info">
+                    <span>HTML</span>
+                </div>
+                <div class="progress-line HTML"> 
+                    <span></span>
+                </div>
+            </div>
+             <div class="bar"><i class="bx bxl-css3"></i>
+                <div class="info">
+                    <span>CSS</span>
+                </div>
+                <div class="progress-line CSS"> 
+                    <span></span>
+                </div>
+            </div> 
+             <div class="bar"><i class="bx bxl-javascript"></i>
+                <div class="info">
+                    <span>javascript</span>
+                </div>
+                <div class="progress-line javascript"> 
+                    <span></span>
+                </div>
+            </div>
+             <div class="bar"><i class='bx bxl-c-plus-plus'></i>
+                <div class="info">
+                    <span>C++</span>
+                </div>
+                <div class="progress-line Cplus"> 
+                    <span> </span>
+                </div>
+            </div>
+             <div class="bar"><i class='bx bxl-c-plus-plus'></i>
+                <div class="info">
+                    <span>C</span>
+                </div>
+                <div class="progress-line C"> 
+                    <span> </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
 <script src="index.js"></script>
 
 
@@ -278,50 +336,53 @@
 </section>
 
 
-
 <section id="contact">
-        <div class="contact container">
-              <h1 class="section-title">Contact <span>Info</span></h1>
-            
-            <div class="contact-items">
-                <div class="contact-item">
-                    <div class="icon">
-                        <img src="images (10).png">
-                    </div>
-                    <div class="contact-info">
-                        <h1>Email</h1>
-                        <h2>arnobroy066@gmail.com</h2>
-                        <h2>c243001@upgrade.iiuc.ac.bd</h2>
-                    </div>
-                </div>
+  <div class="contact container">
+    <h1 class="section-title">Contact <span>Info</span></h1>
 
+    <div class="contact-items">
 
-                <div class="contact-item">
-                    <div class="icon">
-                        <img src="images (9).png">
-                    </div>
-                    <div class="contact-info">
-                        <h1>Phone</h1>
-                        <h2>01648085506</h2>
-                        <h2>01616844333</h2>
-                    </div>
-                </div>
-
-
-                <div class="contact-item">
-                    <div class="icon">
-                        <img src="images (11).png">
-                    </div>
-                    <div class="contact-info">
-                        <h1>Address</h1>
-                        <h2>Anowara, Chittagong,</h2>
-                        <h2>Bangladesh.</h2>
-                    </div>
-                </div>
-            </div>  
+      <!-- EMAIL -->
+      <a href="mailto:arnobroy066@gmail.com" class="contact-item">
+        <div class="icon">
+          <img src="images (10).png" alt="email">
         </div>
+        <div class="contact-info">
+          <h1>Email</h1>
+          <h2>arnobroy066@gmail.com</h2>
+          <h2>c243001@upgrade.iiuc.ac.bd</h2>
+        </div>
+      </a>
 
-    </section>
+      <!-- PHONE -->
+      <a href="tel:+8801648085506" class="contact-item">
+        <div class="icon">
+          <img src="images (9).png" alt="phone">
+        </div>
+        <div class="contact-info">
+          <h1>Phone</h1>
+          <h2>01648-085506</h2>
+          <h2>01616-844333</h2>
+        </div>
+      </a>
+
+      <!-- ADDRESS -->
+      <a href="https://www.google.com/maps/search/?api=1&query=Anowara,Chittagong,Bangladesh"
+         target="_blank"
+         class="contact-item">
+        <div class="icon">
+          <img src="images (11).png" alt="address">
+        </div>
+        <div class="contact-info">
+          <h1>Address</h1>
+          <h2>Anowara, Chittagong</h2>
+          <h2>Bangladesh</h2>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
 
 
     
@@ -428,6 +489,7 @@ document.querySelectorAll(".navbar a").forEach(link => {
         navbar.classList.remove("active");
     });
 });
+
 </script>
 </body>
 </html>

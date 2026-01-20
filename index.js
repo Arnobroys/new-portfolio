@@ -43,3 +43,22 @@ document.querySelectorAll('a[href="#skilling"]').forEach(link => {
     setTimeout(activateSkillAnimation, 400);
   });
 });
+
+
+
+
+
+
+const reveals = document.querySelectorAll('.reveal');
+
+window.addEventListener('scroll', () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    const height = window.innerHeight;
+
+    if (top < height - 120) {
+      el.classList.add('active');
+    }
+  });
+});
+

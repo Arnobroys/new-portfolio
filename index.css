@@ -15,7 +15,6 @@ body {
 }
 body{
   margin: 0;
-  padding-top: 80px; /* fixed header offset */
   background: #081b29;
   color: #fff;
   font-family: Arial, sans-serif;
@@ -212,13 +211,11 @@ line-height: normal;
 }
 
 
-
 @keyframes slideRight {
     0% {
         transform: translateX(-100px);
         opacity: 0;
     }
-
     100% {
         transform: translateX(0px);
         opacity: 1;
@@ -227,30 +224,22 @@ line-height: normal;
 
 @keyframes slideTop {
     0% {
-        transform: translatey(-100px);
+        transform: translateY(-100px);
         opacity: 0;
     }
-
     100% {
-        transform: translatey(0px);
+        transform: translateY(0px);
         opacity: 1;
     }
 }
 
-
-
-
-
-
-
 /* ===== HAMBURGER ===== */
-/* Hamburger Icon */
 .hamburger {
     display: none;
     font-size: 28px;
     color: #fff;
     cursor: pointer;
-    z-index: 1100; /* Navbar এর উপরে থাকবে */
+    z-index: 1100;
 }
 
 /* ===== RESPONSIVE ===== */
@@ -260,48 +249,72 @@ line-height: normal;
         padding: 15px 20px;
         position: fixed;
         z-index: 1000;
+        width: 100%;
     }
 
     .hamburger {
         display: block;
     }
 
-    /* Navbar Mobile Style */
+    /* ===== NAVBAR RIGHT SLIM ===== */
     .navbar {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: linear-gradient(160deg,#010b18,#000814);
-        display: none; /* default hidden */
+        position: fixed;
+        top: 0;
+        right: -260px;
+        width: 240px;
+        height: 100vh;
+        background: linear-gradient(180deg,#010b18,#000814);
+        display: flex;
         flex-direction: column;
         align-items: center;
-        padding: 20px 0;
-        box-shadow: 0 8px 15px rgba(0,0,0,0.3);
-        border-top: 2px solid #0d1a34;
-        transition: all 0.3s ease;
+        padding-top: 100px;
+        box-shadow: -8px 0 20px rgba(0,0,0,0.4);
+        transition: right 0.4s ease;
+        z-index: 999;
     }
 
-    /* Navbar Links */
+    .navbar.active {
+        right: 0;
+    }
+
+    /* ===== SIDE LINE ANIMATION ===== */
+    .navbar::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 3px;
+        height: 0;
+        background: #0ef;
+        transition: height 0.4s ease;
+    }
+
+    .navbar.active::before {
+        height: 100%;
+    }
+
+    /* ===== NAV LINKS ===== */
     .navbar a {
         font-size: 20px;
-        margin: 10px 0;
-        width: 90%;
+        margin: 14px 0;
+        width: 100%;
         text-align: center;
-        padding: 10px 0;
+        padding: 8px 0;
         color: #fff;
         text-decoration: none;
-        border-radius: 8px;
-        transition: background 0.3s, color 0.3s;
+        opacity: 0;
+        transform: translateX(30px);
+        transition: all 0.35s ease;
     }
 
-
-
-    /* Show Navbar when active */
-    .navbar.active {
-        display: flex;
+    .navbar.active a {
+        opacity: 1;
+        transform: translateX(0);
     }
 
+    .navbar a:hover {
+        color: #0ef;
+    }
 
     /* ===== HOME FIX ===== */
     .home {
@@ -331,25 +344,22 @@ line-height: normal;
     .home-sci {
         justify-content: center;
     }
-        .navbar a:hover {
-        background: none;
-        color: #fff;
-        box-shadow: none;
-    }
 }
+
+/* ===== EXTRA MOBILE TWEAKS ===== */
 @media (max-width: 768px) {
     .home-img {
-        margin-top: -30px;   /* image upore tulbe */
+        margin-top: -30px;
     }
 }
-@media (max-width: 768px) {
 
+@media (max-width: 768px) {
     .home {
         flex-direction: column;
     }
 
     .home-img {
-        order: -1;          /* pic likhar upore chole ashbe */
+        order: -1;
         margin-bottom: 20px;
     }
 
@@ -357,6 +367,7 @@ line-height: normal;
         order: 1;
     }
 }
+
 @media (max-width: 480px) {
 
     .header {
@@ -365,7 +376,6 @@ line-height: normal;
 
     .navbar a {
         font-size: 18px;
-        padding: 8px 0;
     }
 
     .home {
@@ -390,17 +400,19 @@ line-height: normal;
         height: 180px;
     }
 }
+
+/* ===== LARGE SCREEN ===== */
 @media (min-width: 1200px) {
 
     .home {
-        max-width: 1200px;      /* content সীমার মধ্যে থাকবে */
-        margin: 0 auto;         /* center হবে */
-        padding: 120px 40px;    /* percentage বাদ */
-        gap: 60px;              /* 80 → 60 */
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 120px 40px;
+        gap: 60px;
     }
 
     .home-content h2 {
-        font-size: 48px;        /* controlled size */
+        font-size: 48px;
     }
 
     .home-content h3 {
@@ -408,54 +420,10 @@ line-height: normal;
     }
 
     .home-img img {
-        width: 260px;           /* 320 → 300 */
+        width: 260px;
         height: 260px;
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
